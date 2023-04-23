@@ -31,6 +31,8 @@ INSERT INTO `departments` (`name`, `nameShortcut`, `city`, `color`) VALUES
     ('Oddělení logistiky', 'LOG', 'Zlín', '#27AE60'),
     ('Oddělení obchodu', 'OBC', 'Ústí nad Labem', '#F7DC6F');
 
+
+
 ALTER TABLE `employees` ADD CONSTRAINT `fk_employee_department`
         FOREIGN KEY (`department_id`)
         REFERENCES `departments` (`id`)

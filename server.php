@@ -1,15 +1,3 @@
-<script>
-
-    function isAdmin() {
-
-
-
-    }
-
-
-
-</script>
-
 <?php
 include 'connection.php';
 session_start();
@@ -55,7 +43,7 @@ if (isset($_POST['register'])) {
             
             
             // Check if the user is an admin
-            $admin_emails = ['adela.sykora@seznam.cz', ''];
+            $admin_emails = ['adela.sykora@seznam.cz', 'tomas.novak@seznam.cz', 'petra.kratochvilova@seznam.cz', 'jan.stepanek@seznam.cz'];
             if (in_array($email, $admin_emails)) {
                 header('Location: depAdmin.php');
             } else {

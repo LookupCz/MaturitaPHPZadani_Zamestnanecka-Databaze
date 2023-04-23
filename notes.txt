@@ -1,12 +1,29 @@
 Filler employees:
 
-Name: Adéla Sýkorová, Email: adela.sykora@seznam.cz, Password: Sykora#123
+ADMINS:
+Name: Adéla Sýkorová, Email: adela.sykora@seznam.cz, Password: Sykora#123Q
 Name: Tomáš Novák, Email: tomas.novak@seznam.cz, Password: Novak&456
 Name: Petra Kratochvílová, Email: petra.kratochvilova@seznam.cz, Password: Kratochvilova!789
-Name: Jan Štěpánek, Email: jan.stepanek@seznam.cz, Password: Stepanek@456
+//Name: Jan Štěpánek, Email: jan.stepanek@seznam.cz, Password: Stepanek@456
+
+
 Name: Kateřina Navrátilová, Email: katerina.navratilova@seznam.cz, Password: Navratilova*123
 Name: Jiří Procházka, Email: jiri.prochazka@seznam.cz, Password: Prochazka$789
 Name: Barbora Bílková, Email: barbora.bilkova@seznam.cz, Password: Bilkova&123
-Name: Marek Novotný, Email: marek.novotny@seznam.cz, Password: Novotny#456
-Name: Veronika Svobodová, Email: veronika.svobodova@seznam.cz, Password: Svobodova$789
-Name: Michal Veselý, Email: michal.vesely@seznam.cz, Password: Vesely*123
+//Name: Marek Novotný, Email: marek.novotny@seznam.cz, Password: Novotny#456
+//Name: Veronika Svobodová, Email: veronika.svobodova@seznam.cz, Password: Svobodova$789
+//Name: Michal Veselý, Email: michal.vesely@seznam.cz, Password: Vesely*123
+
+////////////////////////////////////////////////////////////////
+
+
+1	AdÃ©la	SÃ½korovÃ¡	$2y$10$0BqUU2lcHgAs4EDmaBe0zuwgfxN.NTqYtlpFwLFm9Wao.goeWWjkS	adela.sykora@seznam.cz	3
+2	TomÃ¡Å¡	NovÃ¡k	$2y$10$GBU.gzen/xl6cuou5PkqOeHj46AE0O.c5yps.ytI5gClVy.8uA0X6	tomas.novak@seznam.cz	2
+3	Petra	KratochvÃ­lovÃ¡	$2y$10$T8ZhOJBSS8t5PKugP2k2KO1kI4B97O7KCM8R5MMMsI3niiSQDfr0y	petra.kratochvilova@seznam.cz	3
+4	Jan	Å tÄ›pÃ¡nek	$2y$10$kEDx7hH0vSICM8LG.iSuz.Hnyy98Xg.tYxQcnUdsQvIKyn2.9MRPO	jan.stepanek@seznam.cz	2
+5	KateÅ™ina	NavrÃ¡tilovÃ¡	$2y$10$nAoSPT6NrrbPXwy/d73uV.qMbyPSvdKmNjMEPyG9hzZsvuo08JMYW	katerina.navratilova@seznam.cz	5
+6	JiÅ™Ã­	ProchÃ¡zka	$2y$10$FKZzahLB4pB1e5ErOInCreGp5gtD3Q565SGQKW5YsaGjQem8m7ecy	jiri.prochazka@seznam.cz	1
+7	Barbora	BÃ­lkovÃ¡	$2y$10$DBiC27IQAtIHGfOXCQ0M3.7aLk7yt.Pr1m5kqV.ib9aDNL67cH72O	barbora.bilkova@seznam.cz	8
+8	Marek	NovotnÃ½	$2y$10$5p.EfinRko9632LiG9DKdee9o5IBguQwI10iygjvVQGol7N1NFDti	marek.novotny@seznam.cz	9
+9	Veronika	SvobodovÃ¡	$2y$10$09vSy4eVqQ/3NHdtG6bba.UfdyiNlUIY9xP6cprEzB2OyqIeC8/BC	veronika.svobodova@seznam.cz	6
+10	Michal	VeselÃ½	$2y$10$9GhvYVvBPDrz6uEIfkBiOOvLPp3IY8KYNJCvBOapLCL8HWH5kcakq	michal.vesely@seznam.cz	4
