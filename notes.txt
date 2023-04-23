@@ -1,0 +1,12 @@
+Filler employees:
+
+Name: Adéla Sýkorová, Email: adela.sykora@seznam.cz, Password: Sykora#123
+Name: Tomáš Novák, Email: tomas.novak@seznam.cz, Password: Novak&456
+Name: Petra Kratochvílová, Email: petra.kratochvilova@seznam.cz, Password: Kratochvilova!789
+Name: Jan Štěpánek, Email: jan.stepanek@seznam.cz, Password: Stepanek@456
+Name: Kateřina Navrátilová, Email: katerina.navratilova@seznam.cz, Password: Navratilova*123
+Name: Jiří Procházka, Email: jiri.prochazka@seznam.cz, Password: Prochazka$789
+Name: Barbora Bílková, Email: barbora.bilkova@seznam.cz, Password: Bilkova&123
+Name: Marek Novotný, Email: marek.novotny@seznam.cz, Password: Novotny#456
+Name: Veronika Svobodová, Email: veronika.svobodova@seznam.cz, Password: Svobodova$789
+Name: Michal Veselý, Email: michal.vesely@seznam.cz, Password: Vesely*123

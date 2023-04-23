@@ -7,13 +7,9 @@ CREATE TABLE IF NOT EXISTS `employees` (
     `id` INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     `name` VARCHAR(30) NOT NULL,
     `surname` VARCHAR(30) NOT NULL,
-    `password` VARCHAR(50) NOT NULL,
+    `password` VARCHAR(60) NOT NULL,
     `email` VARCHAR(50) NOT NULL UNIQUE,
-    `department_id` INT(6) UNSIGNED NOT NULL,
-    CONSTRAINT `fk_employee_department`
-        FOREIGN KEY (`department_id`)
-        REFERENCES `departments` (`id`)
-        ON DELETE CASCADE
+    `department_id` INT(6) UNSIGNED NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 CREATE TABLE IF NOT EXISTS `departments` (
@@ -34,3 +30,8 @@ INSERT INTO `departments` (`name`, `nameShortcut`, `city`, `color`) VALUES
     ('Oddělení kvality', 'KVA', 'Olomouc', '#95A5A6'),
     ('Oddělení logistiky', 'LOG', 'Zlín', '#27AE60'),
     ('Oddělení obchodu', 'OBC', 'Ústí nad Labem', '#F7DC6F');
+
+ALTER TABLE `employees` ADD CONSTRAINT `fk_employee_department`
+        FOREIGN KEY (`department_id`)
+        REFERENCES `departments` (`id`)
+        ON DELETE CASCADE;

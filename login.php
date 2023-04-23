@@ -39,7 +39,7 @@
         <h3>Login</h3>
         <p class="blue-text">If cant login, try to <a href="index.php">register</a>.</p>
         <div class="card">
-            <form method="POST" action="logincheck.php">
+            <form method="POST" action="server.php">
                 <div class="formText">
                     <label class="">Email</label>
                     <input type="text" id="femail" name="email" placeholder="Enter your email" onblur="">
@@ -50,7 +50,7 @@
                 </div>
 
                 <div class="formBtn">
-                    <button type="submit" class="">Login</button>
+                    <button type="submit" class="" name="login">Login</button>
                 </div>
             </form>
         </div>
