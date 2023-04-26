@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
+    <meta charset="ISO-8859-1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
@@ -31,14 +31,21 @@
 </head>
 
 <body>
+
+
+
     <?php
         
     include 'connection.php';
 
-    // Get departments
-    $sql = "SELECT * FROM departments";
-    $result = mysqli_query($connect, $sql);
+    echo "<button onclick='window.location.href=\"add_emp.php\";'>Add employee</button>";
+    echo "<button onclick='window.location.href=\"add_dep.php\";'>Add department</button>";
+    
 
+
+    $sql = "SELECT * FROM departments";    
+    $result = mysqli_query($connect, $sql);
+    
     // Check if there are any departments
     if (mysqli_num_rows($result) > 0) {
         // Output each department in a separate div
@@ -56,7 +63,11 @@
             echo "<p>City: $department_city</p>";
 
             // Get employees for this department
+            //mysqli_query($connect ,"SET NAMES utf8mb4_general_ci");
+            
+            
             $sql2 = "SELECT * FROM employees WHERE department_id = $department_id";
+            
             $result2 = mysqli_query($connect, $sql2);
 
             // Check if there are any employees in this department
@@ -66,15 +77,19 @@
                 echo "<div id='employees-$department_id' style='display: none;'>";
                 echo "<p>Employees:</p>";
                 while($row2 = mysqli_fetch_assoc($result2)) {
+                    
                     $employee_name = $row2["name"];
                     $employee_surname = $row2["surname"];
+                    $employee_id = $row2["id"];
                     echo "<p>$employee_name $employee_surname</p>";
+                    echo "<button onclick='window.location.href=\"edit_emp.php?emp_id=$employee_id\";'>Edit $employee_surname</button>";
                 }
                 echo "</div>";
             } else {
                 echo "<p>No employees in this department.</p>";
             }
-            echo "<button onclick='window.location.href=\"edit_dep.php?dep_id=$department_id\";'>Edit</button>";
+            
+            echo "<button onclick='window.location.href=\"edit_dep.php?dep_id=$department_id\";'>Edit Deparment</button>";
             
             echo "<button class='delete-btn' onclick='window.location.href=\"delete_dep.php?dep_id=$department_id\";'>Delete</button>";
 
@@ -98,4 +113,3 @@
     }
     </script>
 </body>
-</

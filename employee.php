@@ -1,6 +1,6 @@
 <?php
 
-    echo "EMPLOYEE"
+    header('Location: register.php');
 
 ?>
 
