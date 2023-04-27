@@ -1,72 +1,80 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Add employee</title>
-
-    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
-        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous">
-    </script>
-    <style>
-    body {
-        color: #000;
-        overflow-x: hidden;
-        height: 100%;
-        ;
-        background-repeat: no-repeat;
-        background-size: 100% 100%
-    }
-
-    .card {
-        padding: 30px 40px;
-        margin-top: 60px;
-        margin-bottom: 60px;
-        border: none !important;
-        box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2)
-    }
-
-    .blue-text {
-        color: #00BCD4
-    }
-    </style>
-</head>
-
-<body>
-
-
-
-    <div class="form">
-        <h3>Add employee</h3>
-        <div class="card">
-            <form method="POST" action="update.php">
-                <div class="formText">
-                    <label class="">Name</label>
-                    <input type="text" id="fname" name="name" placeholder="Enter your name" onblur="">
-                </div>
-                <div class="formText">
-
-                    <label class="">Surname</label>
-                    <input type="text" id="fsurname" name="surname" placeholder="Enter your surname" onblur="">
-                </div>
-                <div class="formText">
-                    <label class="">Password</label>
-                    <input type="password" id="fpassword" name="password" placeholder="Enter your password" onblur="">
-                </div>
-                <div class="formText">
-                    <label class="">Check Password</label>
-                    <input type="password" id="fcheck_password" name="check_password"
-                        placeholder="Re-enter your password" onblur="">
-                </div>
-                <div class="formText">
-                    <label class="">Email</label>
-                    <input type="text" id="femail" name="email" placeholder="Enter your email" onblur="">
-                </div>
-                <div class="formText">
-                    <label class="">Department</label>
-                    <select name="department_id">
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://code.jquery.com/jquery-3.6.3.min.js"
+      integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU="
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+    <h1 class="title">Add employee</h1>
+      <div class="card">
+        <form method="POST" action="update.php">
+          <div class="form__group">
+            <label for="fname" class="form__label">Name</label>
+            <input
+              type="text"
+              id="fname"
+              name="name"
+              placeholder="Enter your name"
+              class="form__input"
+              onblur=""
+            />
+          </div>
+          <div class="form__group">
+            <label for="fsurname" class="form__label">Surname</label>
+            <input
+              type="text"
+              id="fsurname"
+              name="surname"
+              placeholder="Enter your surname"
+              class="form__input"
+              onblur=""
+            />
+          </div>
+          <div class="form__group">
+            <label for="fpassword" class="form__label">Password</label>
+            <input
+              type="password"
+              id="fpassword"
+              name="password"
+              placeholder="Enter your password"
+              class="form__input"
+              onblur=""
+            />
+          </div>
+          <div class="form__group">
+            <label for="fcheck_password" class="form__label">Check Password</label>
+            <input
+              type="password"
+              id="fcheck_password"
+              name="check_password"
+              placeholder="Re-enter your password"
+              class="form__input"
+              onblur=""
+            />
+          </div>
+          <div class="form__group">
+            <label for="femail" class="form__label">Email</label>
+            <input
+              type="text"
+              id="femail"
+              name="email"
+              placeholder="Enter your email"
+              class="form__input"
+              onblur=""
+            />
+          </div>
+          <div class="form__group">
+            <label for="department_id" class="form__label">Department</label>
+            <select name="department_id" class="form__input">
                         <?php
                             // Database connection and query to fetch departments data
                             //$conn = mysqli_connect("localhost", "root", "", "employeesdatabasecopy_2", 3307);

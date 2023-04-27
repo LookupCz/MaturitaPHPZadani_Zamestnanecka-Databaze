@@ -1,0 +1,214 @@
+/* General styles */
+body {
+    background-color: #2B303A;
+    color: #fff;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 0;
+    }
+    
+    a {
+    color: #6BCEDB;
+    text-decoration: none;
+    }
+    
+    button {
+    background-color: #8A1A47;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 10px;
+    padding: 10px;
+    }
+    
+    .card {
+    background-color: #6BCEDB;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    padding: 20px;
+    }
+    
+    .delete-btn {
+    background-color: #8A1A47;
+    color: #fff;
+    float: right;
+    }
+    
+    /* Styles for the header */
+    header {
+    background-color: #2B303A;
+    height: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1;
+    }
+    
+    header a {
+    color: #fff;
+    display: block;
+    float: right;
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 18px;
+    padding: 10px 20px;
+    }
+    
+    header a:hover {
+    background-color: #8A1A47;
+    color: #fff;
+    }
+    
+    /* Styles for the main content */
+    main {
+    margin-top: 80px;
+    padding: 20px;
+    }
+    
+    main h1 {
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 0;
+    }
+    
+    /* Styles for the department cards */
+    .department-card {
+    background-color: #6BCEDB;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    padding: 20px;
+    }
+    
+    .department-card h2 {
+    font-size: 24px;
+    margin-top: 0;
+    }
+    
+    .department-card p {
+    margin: 0;
+    }
+    
+    .department-card .employees-toggle {
+    background-color: #8A1A47;
+    color: #fff;
+    margin-top: 10px;
+    padding: 10px;
+    }
+    
+    .department-card .employees-toggle:hover {
+    background-color: #2B303A;
+    cursor: pointer;
+    }
+    
+    .department-card .employees-list {
+    display: none;
+    margin-top: 10px;
+    }
+    
+    .department-card .employee {
+    margin-bottom: 10px;
+    }
+    
+    .department-card .employee-name {
+    font-weight: bold;
+    }
+    
+    .department-card .employee-edit-btn {
+    background-color: #8A1A47;
+    color: #fff;
+    margin-left: 10px;
+    padding: 5px;
+    }
+    
+    .department-card .employee-edit-btn:hover {
+    background-color: #2B303A;
+    cursor: pointer;
+    }
+    
+    .department-card .department-edit-btn {
+    background-color: #8A1A47;
+    color: #fff;
+    margin-left: 10px;
+    padding: 5px;
+    }
+    
+    .department-card .department-edit-btn:hover {
+    background-color: #2B303A;
+    cursor: pointer;
+    }
+    
+    .department-card .department-delete-btn {
+    background-color: #8A1A47;
+    color: #fff;
+    float: right;
+    padding: 5px;
+    }
+    
+    .department-card .department-delete-btn:hover {
+    background-color: #2B303A;
+    cursor: pointer;
+    }
+
+    .container {
+        margin: 0 auto;
+        width: 80%;
+        max-width: 800px;
+    }
+    
+    h1 {
+        font-size: 36px;
+        text-align: center;
+    }
+    
+    .form {
+        margin-top: 20px;
+    }
+    
+    .form-group {
+        margin-bottom: 10px;
+    }
+    
+    label {
+        display: block;
+        font-size: 18px;
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+    
+    input[type="text"],
+    input[type="color"] {
+        display: block;
+        width: 50%;
+        padding: 10px;
+        font-size: 16px;
+        border-radius: 5px;
+        border: 1px solid #ccc;
+    }
+    
+    input[type="submit"] {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
+    .back-link {
+        display: inline-block;
+        margin-top: 20px;
+        font-size: 16px;
+        color: #007bff;
+        text-decoration: none;
+    }
+
+    button:hover {
+        background-color: #6BCEDB;
+        color: #2B303A;
+      }
+    
