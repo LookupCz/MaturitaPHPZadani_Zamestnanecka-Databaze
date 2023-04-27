@@ -1,56 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <title>Add Employee</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add employee</title>
+
+    <script src="https://code.jquery.com/jquery-3.6.3.min.js"
+        integrity="sha256-pvPw+upLPUjgMXY0G+8O0xUf+/Im1MZjXxxgOcBQBXU=" crossorigin="anonymous">
+    </script>
+    <style>
+    body {
+        color: #000;
+        overflow-x: hidden;
+        height: 100%;
+        ;
+        background-repeat: no-repeat;
+        background-size: 100% 100%
+    }
+
+    .card {
+        padding: 30px 40px;
+        margin-top: 60px;
+        margin-bottom: 60px;
+        border: none !important;
+        box-shadow: 0 6px 12px 0 rgba(0, 0, 0, 0.2)
+    }
+
+    .blue-text {
+        color: #00BCD4
+    }
+    </style>
 </head>
+
 <body>
 
 
-    <h1>Add Employee</h1>
-    <form action="update.php" method="post">
-        <input type="hidden" name="id" placeholder="NULL">
-        <label for="name">Name:</label>
-        <input type="text" name="name" placeholder="Enter name"><br>
-        <label for="surname">Surname:</label>
-        <input type="text" name="surname" placeholder="Enter surname"><br>
-        <label for="password">Password:</label>
-        <input type="password" name="password" placeholder="Enter password"><br>
-        <label for="password">Check_Password:</label>
-        <input type="password" name="password" placeholder="Enter password"><br>
-        <label for="email">Email:</label>
-        <input type="email" name="email" placeholder="Enter email"><br>
-        <label for="depId">Department:</label>
-        <select name="depId">
-            <?php
-                include "connection.php";
 
-                $sql = "SELECT * FROM departments";
-                $result = mysqli_query($connect, $sql);
+    <div class="form">
+        <h3>Add employee</h3>
+        <div class="card">
+            <form method="POST" action="update.php">
+                <div class="formText">
+                    <label class="">Name</label>
+                    <input type="text" id="fname" name="name" placeholder="Enter your name" onblur="">
+                </div>
+                <div class="formText">
 
-                if (mysqli_num_rows($result) > 0) {
-                    while ($row = mysqli_fetch_assoc($result)) {
-                        $dep_id = $row["id"];
-                        $dep_name = $row["name"];
-                        $dep_shortcut = $row["nameShortcut"];
-                        $dep_city = $row["city"];
-                        $dep_color = $row["color"];
+                    <label class="">Surname</label>
+                    <input type="text" id="fsurname" name="surname" placeholder="Enter your surname" onblur="">
+                </div>
+                <div class="formText">
+                    <label class="">Password</label>
+                    <input type="password" id="fpassword" name="password" placeholder="Enter your password" onblur="">
+                </div>
+                <div class="formText">
+                    <label class="">Check Password</label>
+                    <input type="password" id="fcheck_password" name="check_password"
+                        placeholder="Re-enter your password" onblur="">
+                </div>
+                <div class="formText">
+                    <label class="">Email</label>
+                    <input type="text" id="femail" name="email" placeholder="Enter your email" onblur="">
+                </div>
+                <div class="formText">
+                    <label class="">Department</label>
+                    <select name="department_id">
+                        <?php
+                            // Database connection and query to fetch departments data
+                            //$conn = mysqli_connect("localhost", "root", "", "employeesdatabasecopy_2", 3307);
+                            //mysqli_set_charset($conn, "utf8");
+                            $conn = mysqli_connect("localhost", "root", "", "employeesdatabasecopy_3", 3307);
 
-                        if ($dep_id == $employee_depId) {
-                            echo "<option value='$dep_id' selected>$dep_name ($dep_shortcut)</option>";
-                        } else {
-                            echo "<option value='$dep_id'>$dep_name ($dep_shortcut)</option>";
-                        }
-                    }
-                }
-            ?>
-        </select><br>
-        <input type="submit" value="Save" name="addEmp">
+                            $sql = "SELECT id, name FROM departments";
+                            $result = mysqli_query($conn, $sql);
 
-    <br>
-    <a href="depAdmin.php">Back to Departments</a>
+                            // Loop through departments data to create options in the select dropdown
+                            while ($row = mysqli_fetch_assoc($result)) {
+                                echo "<option value='" . $row['id'] . "'>" . $row['name'] . "</option>";
+                            }
+                        ?>
+                    </select>
+                </div>
 
-<script>
+                <div class="formBtn">
+                    <button type="submit" class="" name="addEmp">Add employee</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+
+    <script>
     $("form").submit(isFormValid);
 
     function isFormValid(event) {
@@ -108,12 +151,11 @@
 
     function isInputFilled(inputName) {
         let input = $("input[name=" + inputName + "]");
-        if (input.val().trim() == "")
-            input.after("<span class='error'>You need to fill this!</span>")
-
+        if (input.val().trim() == "") {
+            input.after("<span class='error'>You need to fill this!</span>");
+        }
     }
     </script>
 </body>
-
 
 </html>

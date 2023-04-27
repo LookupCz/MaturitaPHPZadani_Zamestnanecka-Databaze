@@ -39,7 +39,7 @@ if(isset($_POST['saveDep'])) {
     $surname = $_POST['surname'];
     $password = $_POST['password'];
     $email = $_POST['email'];
-    $depId = $_POST['depId'];
+    $depId = $_POST['department_id'];
 
     
 

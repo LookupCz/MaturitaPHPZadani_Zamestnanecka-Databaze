@@ -36,10 +36,12 @@
         <label for="email">Email:</label>
         <input type="email" name="email" value="<?php echo $employee_email; ?>"><br>
         <label for="depId">Department:</label>
+        
         <select name="depId">
             <?php
                 $sql = "SELECT * FROM departments";
                 $result = mysqli_query($connect, $sql);
+
 
                 if (mysqli_num_rows($result) > 0) {
                     while ($row = mysqli_fetch_assoc($result)) {
@@ -50,7 +52,7 @@
                         $dep_color = $row["color"];
 
                         if ($dep_id == $employee_depId) {
-                            echo "<option value='$dep_id' selected>$dep_name ($dep_shortcut)</option>";
+                            echo "<option value='$dep_id'>$dep_name ($dep_shortcut)</option>";
                         } else {
                             echo "<option value='$dep_id'>$dep_name ($dep_shortcut)</option>";
                         }
@@ -60,6 +62,13 @@
         </select><br>
         <input type="submit" value="Save" name="saveEmp">
 
+        <?php
+
+            echo "<button class='delete-btn' onclick='window.location.href=\"delete_emp.php?emp_id=$employee_id\";'>Delete $employee_surname</button>";
+        
+        
+        ?>
+    
     <br>
     <a href="depAdmin.php">Back to Departments</a>
 </body>

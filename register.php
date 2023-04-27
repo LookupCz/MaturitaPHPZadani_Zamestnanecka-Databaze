@@ -70,14 +70,19 @@
                     <select name="department_id">
                         <?php
                             // Database connection and query to fetch departments data
-                            $conn = mysqli_connect("localhost", "root", "", "employeesdatabase", 3307);
-                            mysqli_set_charset($conn, "utf8");
+                            //$conn = mysqli_connect("localhost", "root", "", "employeesdatabase", 3307);
+                            //mysqli_set_charset($conn, "utf8");
+                            
+                            $conn = mysqli_connect("localhost", "root", "", "employeesdatabasecopy_3", 3307);
+                            mysqli_set_charset($conn, "utf8mb4_unicode_ci");
+
+
                             $sql = "SELECT id, name FROM departments";
                             $result = mysqli_query($conn, $sql);
 
                             // Loop through departments data to create options in the select dropdown
                             while ($row = mysqli_fetch_assoc($result)) {
-                                echo "<option value='" . $row['id'] . "'>" . $row['name'] . "</option>";
+                                echo "<option value='" . $row['id'] . "'>" . ($row['name']) . "</option>";
                             }
                         ?>
                     </select>
@@ -150,9 +155,9 @@
 
     function isInputFilled(inputName) {
         let input = $("input[name=" + inputName + "]");
-        if (input.val().trim() == "")
-            input.after("<span class='error'>You need to fill this!</span>")
-
+        if (input.val().trim() == "") {
+            input.after("<span class='error'>You need to fill this!</span>");
+        }
     }
     </script>
 </body>

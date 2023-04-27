@@ -14,6 +14,18 @@ Name: Barbora Bílková, Email: barbora.bilkova@seznam.cz, Password: Bilkova&123
 //Name: Veronika Svobodová, Email: veronika.svobodova@seznam.cz, Password: Svobodova$789
 //Name: Michal Veselý, Email: michal.vesely@seznam.cz, Password: Vesely*123
 
+
+INSERT INTO `departments` (`id`, `name`, `nameShortcut`, `city`, `color`) VALUES
+(1, 'Oddělení financí', 'FIN', 'Praha', '#FF5733'),
+(2, 'Oddělení IT', 'IT', 'Brno', '#3498DB'),
+(3, 'Oddělení marketingu', 'MKT', 'Ostrava', '#F4D03F'),
+(4, 'Oddělení lidských zdrojů', 'LZ', 'Plzeň', '#2ECC71'),
+(5, 'Oddělení prodeje', 'PROD', 'Liberec', '#9B59B6'),
+(6, 'Oddělení vývoje', 'VYV', 'Hradec Králové', '#E74C3C'),
+(7, 'Oddělení kvality', 'KVA', 'Olomouc', '#95A5A6'),
+(8, 'Oddělení logistiky', 'LOG', 'Zlín', '#27AE60'),
+(9, 'Oddělení obchodu', 'OBC', 'Ústí nad Labem', '#F7DC6F');
+
 ////////////////////////////////////////////////////////////////
 
 

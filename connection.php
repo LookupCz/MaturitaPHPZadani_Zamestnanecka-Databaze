@@ -1,6 +1,8 @@
 <?php
 
-    $connect = new mysqli("localhost", "root", "", "employeesdatabasecopy_2", 3307) or die();
+
+    $connect = new mysqli("localhost", "root", "", "employeesdatabasecopy_4", 3307) or die();
+    //$connect->set_charset("utf8mb4_unicode_ci");
     //$sql = "ALTER TABLE departments MODIFY ascii_text_column TEXT CHARACTER SET utf8;";
     
     //$connect->set_charset("utf8");
